@@ -15,7 +15,7 @@ const AppNavigator = () => {
           headerShown: false,
           tabBarActiveBackgroundColor: "#fc5c65",
           tabBarActiveTintColor: "white",
-          tabBarInactiveTintColor: "black",
+          tabBarInactiveTintColor: "#262626",
         }}
       >
         <Tab.Screen

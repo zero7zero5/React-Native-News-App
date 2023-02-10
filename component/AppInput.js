@@ -23,7 +23,7 @@ const AppInput = ({ icon, serach, onSearch, ...otherProps }) => {
 const styles = StyleSheet.create({
   container: {
     width: "100%",
-    backgroundColor: "#e6e6e6",
+    backgroundColor: "white",
     borderRadius: 25,
     padding: 15,
     flexDirection: "row",

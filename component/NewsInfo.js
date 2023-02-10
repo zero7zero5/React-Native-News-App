@@ -10,13 +10,22 @@ const ListingDetails = ({ route }) => {
         <Text style={styles.title}>{route.params.title}</Text>
         <Text style={styles.subtitle}>{route.params.content}</Text>
         <View style={styles.shareContainer}>
-          <Icon name={"whatsapp"} size={50} backgroundColor="#00cc00" />
-          <Icon name={"message"} size={50} backgroundColor="gold" />
-          <Icon name={"email"} size={50} backgroundColor="#3399ff" />
+          <View style={styles.iconContainer}>
+            <Icon name={"whatsapp"} size={50} backgroundColor="#00cc00" />
+            <Text style={styles.logoText}>Whats App</Text>
+          </View>
+          <View style={styles.iconContainer}>
+            <Icon name={"message"} size={50} backgroundColor="gold" />
+            <Text style={styles.logoText}>Message</Text>
+          </View>
+          <View style={styles.iconContainer}>
+            <Icon name={"email"} size={50} backgroundColor="#3399ff" />
+            <Text style={styles.logoText}>Email</Text>
+          </View>
         </View>
         <AppButton
           onPress={() => Linking.openURL(route.params.url)}
-          title={"click here to read full news"}
+          title={"Click here to read full news"}
         />
       </View>
     </View>
@@ -28,6 +37,10 @@ const styles = StyleSheet.create({
     height: 300,
   },
   detailsContainer: { padding: 20 },
+  iconContainer: {
+    alignItems: "center",
+    justifyContent: "center",
+  },
   title: {
     fontSize: 23,
     marginBottom: 10,
@@ -42,6 +55,9 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 18,
+  },
+  logoText: {
+    marginVertical: 5,
   },
 });
 export default ListingDetails;

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Text, View, StyleSheet, FlatList } from "react-native";
 import news from "../api/getNews";
 import Card from "./Card";
-
+import LottieView from "lottie-react-native";
 const articles = [
   {
     source: {
@@ -335,32 +335,47 @@ const articles = [
 ];
 const NewsFeed = ({ navigation }) => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [refresh, onRefresh] = useState(false);
   const getResult = async () => {
+    setLoading(true);
     const res = await news.getNews();
     setData(res.data.articles);
+    setLoading(false);
   };
   useEffect(() => {
-    setData(articles);
-    //getResult();
+    //setData(articles);
+    getResult();
   }, []);
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Top Headlines - India </Text>
-      <FlatList
-        onRefresh={() => setData(articles)}
-        refreshing={refresh}
-        data={data}
-        keyExtractor={(news) => news.publishedAt}
-        renderItem={({ item }) => (
-          <Card
-            title={item.title}
-            subtitle={item.description}
-            image={item.urlToImage}
-            onPress={() => navigation.navigate("Info", item)}
+      {!loading ? (
+        <View>
+          <Text style={styles.text}>Top Headlines - India </Text>
+          <FlatList
+            onRefresh={() => getResult()}
+            refreshing={refresh}
+            data={data}
+            keyExtractor={(news) => news.publishedAt}
+            renderItem={({ item }) => (
+              <Card
+                title={item.title}
+                subtitle={item.description}
+                image={item.urlToImage}
+                onPress={() => navigation.navigate("Info", item)}
+              />
+            )}
           />
-        )}
-      />
+        </View>
+      ) : (
+        <View style={styles.container}>
+          <LottieView
+            loop
+            autoPlay
+            source={require("../animations/96231-loading-orange-animation.json")}
+          />
+        </View>
+      )}
     </View>
   );
 };
@@ -368,15 +383,15 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: 50,
     flex: 1,
-    backgroundColor: "#e6e6e6",
+    backgroundColor: "#ffcccc",
     padding: 10,
   },
   text: {
     fontSize: 23,
     textAlign: "center",
-    color: "#FF595A",
+    color: "#fc5c65",
     marginBottom: 15,
-    fontStyle: "italic",
+    fontWeight: "bold",
   },
 });
 export default NewsFeed;
