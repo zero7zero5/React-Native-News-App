@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "newsapp",
+    "name": "News App",
     "slug": "newsapp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/news.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/news.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

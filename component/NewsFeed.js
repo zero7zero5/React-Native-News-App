@@ -344,8 +344,8 @@ const NewsFeed = ({ navigation }) => {
     setLoading(false);
   };
   useEffect(() => {
-    //setData(articles);
-    getResult();
+    //getResult();
+    setData(articles);
   }, []);
   return (
     <View style={styles.container}>
@@ -385,9 +385,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#ffcccc",
     padding: 10,
+    paddingBottom: 50,
   },
   text: {
-    fontSize: 23,
+    fontSize: 20,
     textAlign: "center",
     color: "#fc5c65",
     marginBottom: 15,

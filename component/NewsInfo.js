@@ -4,22 +4,41 @@ import AppButton from "./AppButton";
 import Icon from "./Icon";
 const ListingDetails = ({ route }) => {
   return (
-    <View>
+    <View style={styles.container}>
       <Image style={styles.image} source={{ uri: route.params.urlToImage }} />
       <View style={styles.detailsContainer}>
         <Text style={styles.title}>{route.params.title}</Text>
         <Text style={styles.subtitle}>{route.params.content}</Text>
         <View style={styles.shareContainer}>
           <View style={styles.iconContainer}>
-            <Icon name={"whatsapp"} size={50} backgroundColor="#00cc00" />
+            <Icon
+              onPress={() =>
+                Linking.openURL(`whatsapp://send?text=${route.params.url}`)
+              }
+              name={"whatsapp"}
+              size={40}
+              backgroundColor="#00cc00"
+            />
             <Text style={styles.logoText}>Whats App</Text>
           </View>
           <View style={styles.iconContainer}>
-            <Icon name={"message"} size={50} backgroundColor="gold" />
+            <Icon
+              onPress={() => Linking.openURL(`sms:?body=${route.params.url}`)}
+              name={"message"}
+              size={40}
+              backgroundColor="gold"
+            />
             <Text style={styles.logoText}>Message</Text>
           </View>
           <View style={styles.iconContainer}>
-            <Icon name={"email"} size={50} backgroundColor="#3399ff" />
+            <Icon
+              onPress={() =>
+                Linking.openURL(`mailto:?&body=${route.params.url}`)
+              }
+              name={"email"}
+              size={40}
+              backgroundColor="#3399ff"
+            />
             <Text style={styles.logoText}>Email</Text>
           </View>
         </View>
@@ -34,7 +53,10 @@ const ListingDetails = ({ route }) => {
 const styles = StyleSheet.create({
   image: {
     width: "100%",
-    height: 300,
+    height: 250,
+  },
+  container: {
+    paddingBottom: 50,
   },
   detailsContainer: { padding: 20 },
   iconContainer: {
@@ -42,7 +64,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   title: {
-    fontSize: 23,
+    fontSize: 20,
     marginBottom: 10,
     color: "#FF595A",
     fontWeight: "bold",
@@ -50,11 +72,11 @@ const styles = StyleSheet.create({
   shareContainer: {
     width: "100%",
     flexDirection: "row",
-    justifyContent: "space-around",
+    justifyContent: "space-evenly",
     marginVertical: 20,
   },
   subtitle: {
-    fontSize: 18,
+    fontSize: 17,
   },
   logoText: {
     marginVertical: 5,

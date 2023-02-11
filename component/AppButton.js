@@ -24,14 +24,14 @@ const styles = StyleSheet.create({
   },
   button: {
     width: "90%",
-    borderRadius: 15,
-    height: 50,
+    borderRadius: 20,
+    height: 45,
     justifyContent: "center",
     alignItems: "center",
     padding: 10,
   },
   text: {
-    fontSize: 18,
+    fontSize: 15,
     color: "white",
   },
 });

@@ -19,7 +19,7 @@ const Card = ({ title, subtitle, image, onPress }) => {
               ? {
                   uri: image,
                 }
-              : require("../assets/News.png")
+              : require("../assets/download.png")
           }
         />
         <View style={styles.detailsConatiner}>
@@ -46,11 +46,11 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   subtitle: {
-    fontSize: 18,
+    fontSize: 15,
     marginTop: 5,
   },
   title: {
-    fontSize: 20,
+    fontSize: 18,
     color: "#FF595A",
     marginBottom: 7,
     fontWeight: "bold",

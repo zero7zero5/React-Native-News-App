@@ -11,7 +11,7 @@ const AppInput = ({ icon, serach, onSearch, ...otherProps }) => {
         <TouchableWithoutFeedback onPress={onSearch}>
           <MaterialCommunityIcons
             color={"#FF595A"}
-            size={27}
+            size={35}
             name={serach}
             style={styles.icon}
           />
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     width: "100%",
     backgroundColor: "white",
     borderRadius: 25,
-    padding: 15,
+    padding: 10,
     flexDirection: "row",
     marginVertical: 15,
   },
