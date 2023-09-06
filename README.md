@@ -37,19 +37,19 @@ Here're some of the project's best features:
 
 <p>1. Install Expo CLI</p>
 
-```
+```sh
 npm i -g expo-cli
 ```
 
 <p>2. Clone this project</p>
 
-```
-git clone zero7zero5/React-Native-Calculator-App
+```sh
+git clone git@github.com:zero7zero5/React-Native-News-App.git
 ```
 
 <p>3. Run this project</p>
 
-```
+```sh
 npm start
 ```
 
