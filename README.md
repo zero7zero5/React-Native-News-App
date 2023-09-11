@@ -7,23 +7,11 @@
 [https://expo.dev/@saber\_basha/newsapp](https://expo.dev/@saber_basha/newsapp)
 <h2>🔍 Want to see the Result?</h2>
 
-Perform the following steps, trust me its very simple to see the result on your phone
-*   Install the expo app from play or app store
+Perform the following steps, trust me it's very simple to see the result on your phone
+*   Install the expo app from Play or App Store
 *   Open the expo app and scan the below QR code
 *   And that's it !...
-<img src="https://qr.expo.dev/expo-go?owner=saber_basha&slug=newsapp&releaseChannel=default&host=exp.host"  height="200/">
-<h2>Project Screenshots:</h2>
-
-<img src="https://www.linkpicture.com/q/1_1277.jpg" alt="project-screenshot" width="200/" >
-
-<img src="https://www.linkpicture.com/q/2_915.jpg" alt="project-screenshot" width="200/">
-
-<img src="https://www.linkpicture.com/q/3_658.jpg" alt="project-screenshot" width="200/">
-
-<img src="https://www.linkpicture.com/q/4_515.jpg" alt="project-screenshot" width="200/">
-
-  
-  
+<img src="https://qr.expo.dev/expo-go?owner=saber_basha&slug=newsapp&releaseChannel=default&host=exp.host"  height="200/">  
 <h2>🧐 Features</h2>
 
 Here're some of the project's best features:
